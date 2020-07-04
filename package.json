@@ -1,10 +1,10 @@
 {
   "name": "travel-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon src/server/index.js -o",
+    "start": "nodemon src/server/server.js -o",
     "build-prod": "webpack --config webpack.prod.js",
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
