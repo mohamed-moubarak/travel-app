@@ -3,36 +3,114 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Weather Journal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel App</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div id="app">
-            <div class="holder headline">
-                Weather Journal App
+        <div id="main-grid">
+            <div class="headline">
+                <h1>Travel Planner</h1>
             </div>
-            <div class="holder zip">
-                <label for="zip">Enter Zipcode here</label>
-                <span class="error" id="zip-error"></span>
-                <input type="text" id="zip" placeholder="Enter zip code here">
-            </div>
-            <div class="holder feel">
-                <label for="feelings">How are you feeling today?</label>
-                <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="5"
-                    cols="50"></textarea>
-                <button id="generate" type="submit"> Generate </button>
-            </div>
-            <div class="holder entry">
-                <div class="title">Most Recent Entry</div>
-                <div id="entryHolder">
-                    <div id="date"></div>
-                    <div id="temp"></div>
-                    <div id="content"></div>
+            <section class="main-section">
+                <div class="trip-container">
+                    <div id="trip-img-section">
+                        <img
+                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
+                    </div>
+                    <div id="trip-details-section">
+                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
+                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
+                        <div id="trip-details-btn-section">
+                            <!-- <button class="trip-btn save-btn">
+                                Save Trip
+                            </button> -->
+                            <button class="trip-btn remove-btn m-0">
+                                Remove Trip
+                            </button>
+                        </div>
+                        <div>
+                            <h3>Destination is <span>220 days away</span></h3>
+                            <h3>Typical Weather for then is </h3>
+                            <h4>High - 6 </h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <section id="trip-booking-section">
+                <form>
+                    <div class="form-control">
+                        <label for="trip-destination">Destination</label>
+                        <input type="text" id="trip-destination" name="trip-destination" placeholder="Enter Location">
+                    </div>
+                    <div class="form-control">
+                        <label for="trip-date">Date</label>
+                        <input type="date" id="trip-date" name="trip-date" placeholder="test">
+                    </div>
+                </form>
+                <!-- <input type="text" class="search-input" placeholder="Search here"> -->
+                <!-- <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
+                <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1> -->
+                <div id="trip-details-btn-section">
+                    <button class="trip-btn save-btn">
+                        Search
+                    </button>
+                    <button class="trip-btn remove-btn">
+                        Clear
+                    </button>
+                </div>
+            </section>
+
+            <section class="main-section search-bg">
+                <div class="trip-container">
+                    <div id="trip-img-section">
+                        <img
+                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
+                    </div>
+                    <div id="trip-details-section">
+                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
+                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
+                        <div id="trip-details-btn-section">
+                            <button class="trip-btn save-btn">
+                                Save Trip
+                            </button>
+                            <!-- <button class="trip-btn remove-btn">
+                                Remove Trip
+                            </button> -->
+                        </div>
+                        <div>
+                            <h3>Destination is <span>220 days away</span></h3>
+                            <h3>Typical Weather for then is </h3>
+                            <h4>High - 6 </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="trip-container">
+                    <div id="trip-img-section">
+                        <img
+                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
+                    </div>
+                    <div id="trip-details-section">
+                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
+                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
+                        <div id="trip-details-btn-section">
+                            <button class="trip-btn save-btn">
+                                Save Trip
+                            </button>
+                            <button class="trip-btn remove-btn">
+                                Remove Trip
+                            </button>
+                        </div>
+                        <div>
+                            <h3>Destination is <span>220 days away</span></h3>
+                            <h3>Typical Weather for then is </h3>
+                            <h4>High - 6 </h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- <script>
