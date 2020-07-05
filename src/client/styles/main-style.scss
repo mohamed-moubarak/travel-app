@@ -8,6 +8,7 @@
 
 #main-grid>* {
     padding: 0 1em;
+    max-width: 100vw;
 }
 
 header {
@@ -27,6 +28,10 @@ header {
     align-self: flex-end;
 }
 
+.mt-1em {
+    margin-top: 1em !important;
+}
+
 .main-section {
     display: flex;
     flex-direction: column;
@@ -44,6 +49,10 @@ header {
 .trip-container {
     display: flex;
     margin: 1em 0;
+}
+
+#trip-img-section {
+    overflow: hidden;
 }
 
 #trip-img-section>img {
