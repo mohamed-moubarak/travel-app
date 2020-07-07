@@ -16,7 +16,7 @@
                     <h1>Travel Planner</h1>
                 </header>
                 <div class="self-align-end mt-1em">
-                    <button class="trip-btn save-btn">
+                    <button id="add-new-trip" class="trip-btn save-btn">
                         + Add Trip
                     </button>
                 </div>
@@ -53,16 +53,18 @@
                         <label for="trip-destination">Destination</label>
                         <input type="text" id="trip-destination" name="trip-destination" placeholder="Enter Location">
                     </div>
+                    <div id="destination-err" class="error"></div>
                     <div class="form-control">
                         <label for="trip-date">Date</label>
                         <input type="date" id="trip-date" name="trip-date" placeholder="test">
                     </div>
+                    <div id="date-err" class="error"></div>
                 </form>
                 <!-- <input type="text" class="search-input" placeholder="Search here"> -->
                 <!-- <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
                 <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1> -->
                 <div id="trip-details-btn-section">
-                    <button class="trip-btn save-btn">
+                    <button id="search-btn" class="trip-btn save-btn">
                         Search
                     </button>
                     <button class="trip-btn remove-btn">

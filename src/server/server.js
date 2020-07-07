@@ -22,3 +22,10 @@ app.get('/', (req, res) => {
 app.listen(8081, () => {
     console.log('App is listening on port 8081!')
 });
+
+const helperAPI = require('./helper-api.js')
+app.post('/searchCity', (req, res) => {
+    helperAPI.getTripSearchResults(req.body.query, req.body.date,(searchResults) => {
+        res.send(searchResults);
+    });
+});
