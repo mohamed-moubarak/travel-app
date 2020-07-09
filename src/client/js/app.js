@@ -5,6 +5,7 @@ const scrollToElement = (element) => {
     });
 };
 
+// Funtion to send the search request to express server
 const search = async (query, date) => {
     window.scroll({
         top,
@@ -36,6 +37,7 @@ const search = async (query, date) => {
     }
 }
 
+// Function to display results to DOM
 const displayResults = (results, date) => {
     const section = document.querySelector('section#search-trip-results');
     let h1, tripContainer, tripImgSection, img, tripDetailsSection,

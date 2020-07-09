@@ -7,13 +7,14 @@ import './styles/resets.scss';
 import './styles/base.scss';
 import './styles/main-style.scss';
 
-
+//Event listener to add scroll to searching new trips
 document.querySelector('button#add-new-trip').addEventListener('click', (event) => {
     event.preventDefault();
     let selectedSection = document.querySelector('#trip-booking-section');
     scrollToElement(selectedSection);
 });
 
+//Event listener to start searching with the choosen criteria
 document.querySelector('button#search-btn').addEventListener('click', (event) => {
     event.preventDefault();
     const button = document.querySelector('button#search-btn');
@@ -43,6 +44,7 @@ document.querySelector('button#search-btn').addEventListener('click', (event) =>
     search(location, tripDate);
 });
 
+//Event listener to clear trip search form
 document.querySelector('button#clear-btn').addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('trip-destination').value = null;
@@ -53,6 +55,7 @@ document.querySelector('button#clear-btn').addEventListener('click', (event) => 
     scrollToElement(selectedSection);
 });
 
+//Event listener on save button on each trip in search results
 document.querySelector('section#search-trip-results').addEventListener('click', (event) => {
     if (event.target.nodeName === 'BUTTON' && event.target.className === 'trip-btn save-btn') {
         event.preventDefault();
@@ -75,6 +78,7 @@ document.querySelector('section#search-trip-results').addEventListener('click', 
     }
 });
 
+//Event listener on remove button on each trip in my trips list
 document.querySelector('section#my-trips-section').addEventListener('click', (event) => {
     if (event.target.nodeName === 'BUTTON' && event.target.className === 'trip-btn remove-btn') {
         event.preventDefault();

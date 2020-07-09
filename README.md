@@ -17,11 +17,12 @@ https://github.com/udacity/fend/tree/refresh-2019
 * Signup for WEATHERBIT API key at **https://www.weatherbit.io/account/create**.
 * Signup for PIXABAY API key at **https://pixabay.com/api/docs/**.
 * Add **.env** file to the root folder of the project.
-* Add the below keys to **.env** file.
+* Add the below keys to **.env** file and add ENV=Production at the end.
 ```
 WEATHERBIT_API_KEY=**************************
 PIXABAY_API_KEY=**************************
 GEONAMES_USERNAME=**************************
+ENV=Production
 ```
 * You can start a dev server using webpack by the following command
 `npm run build-dev`

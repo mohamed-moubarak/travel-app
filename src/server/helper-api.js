@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
-var url = require('url');
 
+// Function to start searching trips, called by server.js when /searchCity post request is received
 const getTripSearchResults = async (query, date, callback) => {
     const response = await fetch(`http://api.geonames.org/searchJSON?name=${query}&maxRows=10&username=${process.env.GEONAMES_USERNAME}`, {
         method: 'GET',
@@ -57,6 +57,7 @@ const getTripSearchResults = async (query, date, callback) => {
     }
 }
 
+// Function to get Current weather
 const getCurrentWeather = async (city) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/current?key=${process.env.WEATHERBIT_API_KEY}&lat=${city.lat}&lon=${city.lng}`, {
         method: 'GET',
@@ -76,6 +77,7 @@ const getCurrentWeather = async (city) => {
     }
 }
 
+// Function to get Weather forecast
 const getWeatherForecast = async (city, date) => {
     const response = await fetch(`https://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHERBIT_API_KEY}&lat=${city.lat}&lon=${city.lng}`, {
         method: 'GET',
@@ -103,6 +105,7 @@ const getWeatherForecast = async (city, date) => {
     }
 }
 
+// Function to get Trip image
 const getTripImage = async (city) => {
     if (!city || (!city.name && !city.countryName))
         return;
@@ -136,6 +139,7 @@ const getTripImage = async (city) => {
     }
 }
 
+// Helper Function to get Country images when city images returns empty array
 const getCountryImage = async (city) => {
     if (!city || (!city.name && !city.countryName))
         return;
@@ -165,7 +169,7 @@ const getCountryImage = async (city) => {
     }
 }
 
-
+// Function to get Country facts
 const getCountryFacts = async (city) => {
     if (!city.countryName)
         return;

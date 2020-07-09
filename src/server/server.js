@@ -19,13 +19,24 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('dist/index.html'))
 });
 
+//Start server listening
 app.listen(8081, () => {
     console.log('App is listening on port 8081!')
 });
 
-const helperAPI = require('./helper-api.js')
-app.post('/searchCity', (req, res) => {
-    helperAPI.getTripSearchResults(req.body.query, req.body.date,(searchResults) => {
-        res.send(searchResults);
-    });
+//End point used to test server is reached
+app.get("/testserver", (req, res) => {
+    res.status(200).send("Hello from server!");
 });
+
+// Adding helperAPI and searchcity endpoint when environment is production only
+if (process.env.ENV == 'Production') {
+    const helperAPI = require('./helper-api.js')
+    app.post('/searchCity', (req, res) => {
+        helperAPI.getTripSearchResults(req.body.query, req.body.date, (searchResults) => {
+            res.send(searchResults);
+        });
+    });
+}
+
+module.exports = app;
