@@ -36,7 +36,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 18em;
     margin: 0;
     background-color: #ffeeee;
     padding: 1em;
@@ -51,42 +50,43 @@ header {
     margin: 1em 0;
 }
 
-#trip-img-section {
+.trip-img-section {
     overflow: hidden;
+    display: block;
+    min-width: fit-content;
+    max-height: 13.5em;
 }
 
-#trip-img-section>img {
+.trip-img-section>img {
     border: 2px #dadada59 solid;
     border-radius: 5px;
     max-width: 22em;
+    min-width: 22em;
+    min-height: 13.5em;
+    max-height: 13.5em;
 }
 
-#trip-details-section {
+.trip-details-section {
     margin: 0 1em;
 }
 
-#trip-details-section *,
+.trip-details-section *,
 #trip-booking-section>form>* {
     margin-bottom: 0.5em;
 }
 
-#trip-details-btn-section {
+.trip-details-btn-section {
     display: flex;
 }
 
-#trip-details-btn-section>button.save-btn {
+.trip-details-btn-section>button.save-btn {
     background: #fff;
     border-color: #000;
 }
 
-#trip-details-btn-section>button.remove-btn {
+.trip-details-btn-section>button.remove-btn {
     background: transparent;
     border-color: #fff;
-    margin: 0 1em;
-}
-
-.m-0 {
-    margin: 0 !important;
 }
 
 .trip-btn {
@@ -141,6 +141,20 @@ h1 {
     font-size: 36px;
 }
 
+#search-trip-results {
+    display: none;
+}
+
+#my-trips-section {
+    display: none;
+}
+
+.country-flag {
+    max-width: 80px;
+    height: 40px;
+    margin-left: 1em;
+}
+
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -154,7 +168,11 @@ button:focus {
         flex-direction: column;
     }
 
-    #trip-details-section {
+    .trip-details-section {
         margin: 0;
+    }
+
+    .trip-img-section>img {
+        max-width: 16em;
     }
 }

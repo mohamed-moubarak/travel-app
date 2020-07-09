@@ -18,6 +18,10 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: 'file-loader'
+            },
+            {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }

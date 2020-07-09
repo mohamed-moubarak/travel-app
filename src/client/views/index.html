@@ -21,31 +21,8 @@
                     </button>
                 </div>
             </div>
-            <section class="main-section">
-                <h1>My Trips</h1>
-                <div class="trip-container">
-                    <div id="trip-img-section">
-                        <img
-                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
-                    </div>
-                    <div id="trip-details-section">
-                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
-                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
-                        <div id="trip-details-btn-section">
-                            <!-- <button class="trip-btn save-btn">
-                                Save Trip
-                            </button> -->
-                            <button class="trip-btn remove-btn m-0">
-                                Remove Trip
-                            </button>
-                        </div>
-                        <div>
-                            <h3>Destination is <span>220 days away</span></h3>
-                            <h3>Typical Weather for then is </h3>
-                            <h4>High - 6 </h4>
-                        </div>
-                    </div>
-                </div>
+            <section id="my-trips-section" class="main-section">
+                <h1 id="my-trips-header">My Trips</h1>
             </section>
             <section id="trip-booking-section">
                 <form>
@@ -60,77 +37,28 @@
                     </div>
                     <div id="date-err" class="error"></div>
                 </form>
-                <!-- <input type="text" class="search-input" placeholder="Search here"> -->
-                <!-- <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
-                <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1> -->
                 <div id="trip-details-btn-section">
                     <button id="search-btn" class="trip-btn save-btn">
                         Search
                     </button>
-                    <button class="trip-btn remove-btn">
-                        Clear
+                    <button id="clear-btn" class="trip-btn remove-btn">
+                        Reset
                     </button>
                 </div>
             </section>
 
-            <section class="main-section search-bg">
-                <h1>Search Results</h1>
-                <div class="trip-container">
-                    <div id="trip-img-section">
-                        <img
-                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
-                    </div>
-                    <div id="trip-details-section">
-                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
-                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
-                        <div id="trip-details-btn-section">
-                            <button class="trip-btn save-btn">
-                                Save Trip
-                            </button>
-                            <!-- <button class="trip-btn remove-btn">
-                                Remove Trip
-                            </button> -->
-                        </div>
-                        <div>
-                            <h3>Destination is <span>220 days away</span></h3>
-                            <h3>Typical Weather for then is </h3>
-                            <h4>High - 6 </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="trip-container">
-                    <div id="trip-img-section">
-                        <img
-                            src="https://theswissholidays.co.in/europe-tours/europe-tour-packages/images/paris-tour1.jpg" />
-                    </div>
-                    <div id="trip-details-section">
-                        <h1 class="trip-details-header">My Trip to: <span class="trip-details"> DESTINATION</span></h1>
-                        <h1 class="trip-details-header">Departing at: <span class="trip-details"> DATE</span></h1>
-                        <div id="trip-details-btn-section">
-                            <button class="trip-btn save-btn">
-                                Save Trip
-                            </button>
-                            <button class="trip-btn remove-btn">
-                                Remove Trip
-                            </button>
-                        </div>
-                        <div>
-                            <h3>Destination is <span>220 days away</span></h3>
-                            <h3>Typical Weather for then is </h3>
-                            <h4>High - 6 </h4>
-                        </div>
-                    </div>
-                </div>
+            <section id="search-trip-results" class="main-section search-bg">
+
             </section>
         </div>
 
-        <!-- <script>
+        <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('/service-worker.js');
                 });
             }
-        </script> -->
+        </script>
     </body>
 
 </html>
